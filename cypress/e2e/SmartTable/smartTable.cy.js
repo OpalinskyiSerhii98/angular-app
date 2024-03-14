@@ -59,11 +59,11 @@ describe("Smart table", ()=> {
 
     smartTable.submitButton.click()
 
-    smartTable.idColumn.should("contain.text", editedUserData.id);
-    smartTable.firstNameColumn.should("contain.text", editedUserData.firstName);
-    smartTable.lastNameColumn.should("contain.text", editedUserData.lastName);
-    smartTable.usernameColumn.should("contain.text", editedUserData.username);
-    smartTable.emailColumn.should("contain.text", editedUserData.email);
-    smartTable.ageColumn.should("contain.text", editedUserData.age);
+    smartTable.idColumn.eq(0).should("contain.text", editedUserData.id);
+    smartTable.firstNameColumn.eq(0).should("contain.text", editedUserData.firstName);
+    smartTable.lastNameColumn.eq(0).should("contain.text", editedUserData.lastName);
+    smartTable.usernameColumn.eq(0).should("contain.text", editedUserData.username);
+    smartTable.emailColumn.eq(0).should("contain.text", editedUserData.email);
+    smartTable.ageColumn.eq(0).should("contain.text", editedUserData.age);
     })
   })
